@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page For ArtApp</title>
+
+    <style>
+
+        body {background-color: midnightblue}
+        p {color: darkorange;
+            font-family: Avenir;
+            font-size: 120%;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Zarejestruj się</h1>
+<form th:action="@{/mvc/registration}"
+      th:object="${userForm}" method="POST">
+    Username:
+    <input type="text" th:field="*{username}" />
+    <br/>
+    Password:
+    <input type="text" th:field="*{password}" />
+    <br/>
+    Email:
+    <input type="text" th:field="*{email}" />
+    <br/>
+    <input type="submit" value="Zarejestruj" />
+</form>
+
+<div th:if="${errorMessage}" th:utext="${errorMessage}" style="color:red;font-style:italic;">
+    ...
+</div>
+
+</body>
+</html>

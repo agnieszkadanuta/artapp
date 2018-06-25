@@ -9,7 +9,7 @@ import java.util.List;
 @Inheritance(strategy = InheritanceType.JOINED)
 @Entity
 @Table
-public class User {
+public class ArtAppUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

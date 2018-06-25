@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @Entity
-public class Artist extends User {
+public class Artist extends ArtAppUser {
 
     private Role role = Role.ARTIST;
     private LocalDate yearOfBirth;

@@ -8,9 +8,7 @@ import javax.persistence.Entity;
 @Data
 @AllArgsConstructor
 @Entity
-public class Collector extends User {
+public class Collector extends ArtAppUser {
 
-
-
-
+    private Role role = Role.COLLECTOR;
 }
